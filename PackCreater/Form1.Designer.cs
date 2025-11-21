@@ -65,6 +65,7 @@
             pack_type.Name = "pack_type";
             pack_type.Size = new Size(128, 22);
             pack_type.TabIndex = 1;
+            pack_type.SelectedIndexChanged += pack_type_SelectedIndexChanged;
             // 
             // pack_name
             // 
@@ -98,7 +99,6 @@
             version.DropDownStyle = ComboBoxStyle.DropDownList;
             version.FormattingEnabled = true;
             version.ItemHeight = 14;
-            version.Items.AddRange(new object[] { "1.13 - 1.14.4", "1.15 - 1.16.1", "1.16.2 - 1.16.5", "1.17 - 1.17.1", "1.18 - 1.18.1", "1.18.2", "1.19 - 1.19.3", "1.19.4", "1.20 - 1.20.1", "1.20.2", "1.20.3 - 1.20.4", "1.20.5 - 1.20.6", "1.21 - 1.21.1", "1.21.2 - 1.21.3", "1.21.5", "1.21.6", "1.21.7 - 1.21.8", "1.21.9 - 1.21.10" });
             version.Location = new Point(12, 117);
             version.Name = "version";
             version.Size = new Size(138, 22);
@@ -108,7 +108,7 @@
             // 
             description_label.AutoSize = true;
             description_label.Font = new Font("Consolas", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            description_label.Location = new Point(12, 149);
+            description_label.Location = new Point(12, 153);
             description_label.Name = "description_label";
             description_label.Size = new Size(84, 14);
             description_label.TabIndex = 9;
@@ -117,7 +117,7 @@
             // description_check
             // 
             description_check.AutoSize = true;
-            description_check.Location = new Point(12, 166);
+            description_check.Location = new Point(12, 170);
             description_check.Name = "description_check";
             description_check.Size = new Size(15, 14);
             description_check.TabIndex = 5;
@@ -127,7 +127,7 @@
             // description
             // 
             description.Enabled = false;
-            description.Location = new Point(12, 186);
+            description.Location = new Point(12, 190);
             description.Multiline = true;
             description.Name = "description";
             description.Size = new Size(262, 66);
@@ -136,7 +136,7 @@
             // 
             // folder_select
             // 
-            folder_select.Location = new Point(12, 279);
+            folder_select.Location = new Point(12, 276);
             folder_select.Name = "folder_select";
             folder_select.Size = new Size(81, 23);
             folder_select.TabIndex = 7;
@@ -147,7 +147,7 @@
             // selected_folder
             // 
             selected_folder.AutoSize = true;
-            selected_folder.Location = new Point(12, 262);
+            selected_folder.Location = new Point(12, 259);
             selected_folder.Name = "selected_folder";
             selected_folder.Size = new Size(119, 14);
             selected_folder.TabIndex = 14;
@@ -172,7 +172,7 @@
             // 
             // create
             // 
-            create.Location = new Point(12, 308);
+            create.Location = new Point(12, 305);
             create.Name = "create";
             create.Size = new Size(262, 23);
             create.TabIndex = 8;
